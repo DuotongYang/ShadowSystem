@@ -2,7 +2,9 @@
 
 Zhijie Nie
 
-Revised on 2017-08-09
+Duotong Yang
+
+Revised on 2017-10-11
 
 
 ## Software Requirement
@@ -109,6 +111,9 @@ INSERT INTO Measurement(HistorianID, DeviceID, PointTag, SignalTypeID, PhasorSou
 7. Click **Save** and **Initialize**
 8. Go to the tab ***Metadata >> Measurements*** to check whether the internal data connection is sucessful or not; the subcribed measurements are added at the end of the list with new ID assigned by openHistorian.
 9. Go to the tab ***Monitor >> Graph Measurements*** to see if the subcribed measurements can be displayed on the graph window
+10. The zip file contains a folder with the current Grafana version. Extract this folder to anywhere you want Grafana to run from. Go into the `conf` directory and make a copy of `sample.ini` as `custom.ini`. You should edit `custom.ini`, never `defaults.ini`.
+11. The default Grafana port is `3000`, this port requires extra permissions on windows. Edit custom.ini and uncomment the `http_port` configuration option (; is the comment character in ini files) and change it to something like `http_port = 8080` or similar. That port should not require extra Windows privileges.
+12. Start Grafana by executing `grafana-server.exe` under the directory `\usr\grafana\bin`, preferably from the command line. If you want to run Grafana as windows service, download `NSSM`. It is very easy add Grafana as a Windows service using that tool.
 
 The following link is the similar reference for creating internal gateway connections in **SIEGate**:
 `https://github.com/GridProtectionAlliance/SIEGate/blob/master/Source/Documentation/wiki/Creating_Internal_Gateway_Connections.md`
