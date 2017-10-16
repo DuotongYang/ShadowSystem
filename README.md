@@ -138,7 +138,7 @@ grafana-cli plugins install gridprotectionalliance-openhistorian-datasource
 
 
 ### Connect openHistorian Data Source in Grafana
-1. Open browser and go to `localhost:3000`
+1. Open browser and go to `localhost:8080`(It is not '3000' any more since you change 'custom.ini' to 8080)
 2. Go to the tab ***Grafana Logo >> Data Sources >> Add data source***.
 3. Type `openHistorian Data Source` (as you like) in **Name**, and change the type to `openHistorian` in the drop-down list
 4. Type `http://localhost:8180/api/grafana/` in **Url**.
