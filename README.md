@@ -14,6 +14,7 @@ Revised on 2017-10-11
 * Python 2.7
 * Pycharm Community Edition
 * MySQL Workbench Community Edition (Including sub-requirement like Visual C/C++ compilers)
+* MySQL installer (inside MySQL installer to install MySQL Community Server 5.7.20 and MySQL.NET connector)
 * Grafana
 * Wix Tools
 * NSSM (`https://nssm.cc/`)
@@ -36,8 +37,8 @@ Revised on 2017-10-11
 
 
 ## How to create measurements in openECA using SQL script
-1. Copy `C:\Program Files\openECA\Server\Database Scripts\MySQL\SampleDataSet.sql` to a directory you have full control permissions
-
+1. Copy `C:\Program Files\openECA\Server\Database Scripts\MySQL\SampleDataSet.sql` to a directory you have full control permissions. If you had already got the modified SampleDataSet.sql, replace the one under Database `Scripts\MySQL`
+  
 2. Add measurement as follows:
 ```sql
 INSERT INTO Measurement(HistorianID, DeviceID, PointTag, SignalTypeID, PhasorSourceIndex, SignalReference, Description, Enabled) VALUES(1, 1, 'SS_118:MEASB14VOLTV', 3, NULL, 'SS118-MEASB14VOLTV', 'Shadow System for 118-bus system - Bus 14 Voltage Magnitude MeasB14VoltV', 1);
